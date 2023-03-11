@@ -18,7 +18,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         layout.scrollDirection = .vertical
         let view = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.register(ProductCell.self, forCellWithReuseIdentifier: ReuseIdentifiers.product.rawValue)
+        view.register(ProductCardCell.self, forCellWithReuseIdentifier: ReuseIdentifiers.product.rawValue)
         view.delegate = self
         view.dataSource = self
         return view
@@ -65,7 +65,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifiers.product.rawValue, for: indexPath) as! ProductCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifiers.product.rawValue, for: indexPath) as! ProductCardCell
         let uiModel = productCards[indexPath.item]
         let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(gestureRecognizer:)))
         cell.configure(uiModel: uiModel)
@@ -100,40 +100,6 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
 
     private enum ReuseIdentifiers: String {
         case product
-    }
-
-}
-
-class ProductCell: UICollectionViewCell {
-
-    var uiModel: ProductCardUiModel?
-
-    private let nameLabel: UILabel = {
-        let view = UILabel()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.font = UIFont.systemFont(ofSize: 16)
-        view.backgroundColor = .lightGray
-        return view
-    }()
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addSubview(nameLabel)
-        NSLayoutConstraint.activate([
-            nameLabel.topAnchor.constraint(equalTo: topAnchor),
-            nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-        ])
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    func configure(uiModel: ProductCardUiModel) {
-        self.uiModel = uiModel
-        nameLabel.text = uiModel.name
     }
 
 }

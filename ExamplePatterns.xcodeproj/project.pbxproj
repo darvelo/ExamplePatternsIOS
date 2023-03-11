@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55286BC029BCBED900DFBB41 /* ProductCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55286BBF29BCBED900DFBB41 /* ProductCardCell.swift */; };
 		55F17F5C29BC647200788508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F17F5B29BC647200788508 /* AppDelegate.swift */; };
 		55F17F6329BC647200788508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F17F6129BC647200788508 /* Main.storyboard */; };
 		55F17F6529BC647300788508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F17F6429BC647300788508 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55286BBF29BCBED900DFBB41 /* ProductCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardCell.swift; sourceTree = "<group>"; };
 		55F17F5829BC647200788508 /* ExamplePatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamplePatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F17F5B29BC647200788508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55F17F6229BC647200788508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55286BC229BCBF2E00DFBB41 /* ProductCard */ = {
+			isa = PBXGroup;
+			children = (
+				55286BBF29BCBED900DFBB41 /* ProductCardCell.swift */,
+				55F17F8F29BC6AB000788508 /* ProductCardUiModel.swift */,
+			);
+			path = ProductCard;
+			sourceTree = "<group>";
+		};
 		55F17F4F29BC647200788508 = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +190,7 @@
 		55F17F8A29BC69D200788508 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				55F17F8F29BC6AB000788508 /* ProductCardUiModel.swift */,
+				55286BC229BCBF2E00DFBB41 /* ProductCard */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -295,6 +306,7 @@
 				55F17F7A29BC65A000788508 /* ReadProductListInteractor.swift in Sources */,
 				55F17F9529BC740400788508 /* ProductDetailVM.swift in Sources */,
 				55F17F9029BC6AB000788508 /* ProductCardUiModel.swift in Sources */,
+				55286BC029BCBED900DFBB41 /* ProductCardCell.swift in Sources */,
 				55F17F9929BC7F9C00788508 /* ReadProductInteractor.swift in Sources */,
 				55F17F7429BC656100788508 /* HomeVM.swift in Sources */,
 			);

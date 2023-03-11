@@ -13,6 +13,15 @@ class ApiService {
     private let products = [
         ProductDTO(id: "1", name: "First Product"),
         ProductDTO(id: "2", name: "Second Product"),
+        ProductDTO(id: "3", name: "Third Product"),
+        ProductDTO(id: "4", name: "Fourth Product"),
+        ProductDTO(id: "5", name: "Fifth Product"),
+        ProductDTO(id: "6", name: "Sixth Product"),
+        ProductDTO(id: "7", name: "Seventh Product"),
+        ProductDTO(id: "8", name: "Eighth Product"),
+        ProductDTO(id: "9", name: "Ninth Product"),
+        ProductDTO(id: "10", name: "Tenth Product"),
+        ProductDTO(id: "11", name: "Eleventh Product"),
     ]
 
     func fetchProducts() -> AnyPublisher<[ProductDTO], Never> {
