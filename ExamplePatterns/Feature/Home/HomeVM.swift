@@ -19,14 +19,15 @@ class HomeVM: ObservableObject {
     init(readProductListInteractor: ReadProductListInteractor) {
         state = State(productCards: [])
 
-        readProductListInteractor.execute().map { products in
-            return products.map { $0.asProductCardUiModel() }
-        }
-        .sink { [weak self] uiModels in
-            guard let self else { return }
-            self.state.productCards = uiModels
-        }
-        .store(in: &cancellables)
+        readProductListInteractor.execute()
+            .map { products in
+                return products.map { $0.asProductCardUiModel() }
+            }
+            .sink { [weak self] uiModels in
+                guard let self else { return }
+                self.state.productCards = uiModels
+            }
+            .store(in: &cancellables)
     }
 
     func onProductCardTap(uiModel: ProductCardUiModel) {

@@ -51,6 +51,6 @@ class ProductDetailVC: UIViewController {
     }
 
     private func render(state: ProductDetailVM.State) {
-        titleView.text = state.product?.name
+        titleView.text = state.title
     }
 }

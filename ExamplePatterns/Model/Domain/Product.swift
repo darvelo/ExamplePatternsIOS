@@ -13,7 +13,6 @@ struct Product {
 }
 
 extension ProductDTO {
-
     func asProduct() -> Product {
         return Product(id: id,
                        name: name)

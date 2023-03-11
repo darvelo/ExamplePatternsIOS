@@ -13,7 +13,6 @@ struct ProductCardUiModel {
 }
 
 extension Product {
-
     func asProductCardUiModel() -> ProductCardUiModel {
         return ProductCardUiModel(id: id,
                                   name: name)

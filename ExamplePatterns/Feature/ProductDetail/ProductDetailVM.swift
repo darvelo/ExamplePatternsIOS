@@ -16,13 +16,14 @@ class ProductDetailVM: ObservableObject {
     var onNavigationEvent: ((NavigationEvent) -> Void)?
 
     init(productId: String, readProductInteractor: ReadProductInteractor) {
-        state = State()
+        state = State(title: "Loading...")
 
-        readProductInteractor.execute(productId: productId).sink { [weak self] product in
-            guard let self else { return }
-            self.state.product = product
-        }
-        .store(in: &cancellables)
+        readProductInteractor.execute(productId: productId)
+            .sink { [weak self] product in
+                guard let self else { return }
+                self.state.title = product?.name ?? "Loading Failed"
+            }
+            .store(in: &cancellables)
     }
 
     func onDisappear() {
@@ -30,7 +31,7 @@ class ProductDetailVM: ObservableObject {
     }
 
     struct State {
-        var product: Product?
+        var title: String
     }
 
     enum NavigationEvent {
