@@ -26,6 +26,10 @@ class Dependencies {
         return ReadProductListInteractor(productRepo: productRepo)
     }
 
+    func readProductInteractorFactory() -> ReadProductInteractor {
+        return ReadProductInteractor(productRepo: productRepo)
+    }
+
     func homeVMFactory() -> HomeVM {
         return HomeVM(readProductListInteractor: readProductListInteractorFactory())
     }
@@ -36,7 +40,7 @@ class Dependencies {
     }
 
     func productDetailVMFactory(productId: String) -> ProductDetailVM {
-        return ProductDetailVM(productId: productId, productRepo: productRepo)
+        return ProductDetailVM(productId: productId, readProductInteractor: readProductInteractorFactory())
     }
 
     func productDetailCoordinatorFactory(productId: String) -> ProductDetailCoordinator {

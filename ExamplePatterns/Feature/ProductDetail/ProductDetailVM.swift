@@ -15,10 +15,10 @@ class ProductDetailVM: ObservableObject {
     @Published var state: State
     var onNavigationEvent: ((NavigationEvent) -> Void)?
 
-    init(productId: String, productRepo: ProductRepo) {
+    init(productId: String, readProductInteractor: ReadProductInteractor) {
         state = State()
 
-        productRepo.fetchProduct(productId: productId).sink { [weak self] product in
+        readProductInteractor.execute(productId: productId).sink { [weak self] product in
             guard let self else { return }
             self.state.product = product
         }

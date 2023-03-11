@@ -25,6 +25,7 @@
 		55F17F9329BC73FB00788508 /* ProductDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F17F9229BC73FB00788508 /* ProductDetailCoordinator.swift */; };
 		55F17F9529BC740400788508 /* ProductDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F17F9429BC740400788508 /* ProductDetailVM.swift */; };
 		55F17F9729BC740C00788508 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F17F9629BC740C00788508 /* ProductDetailVC.swift */; };
+		55F17F9929BC7F9C00788508 /* ReadProductInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F17F9829BC7F9C00788508 /* ReadProductInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		55F17F9229BC73FB00788508 /* ProductDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCoordinator.swift; sourceTree = "<group>"; };
 		55F17F9429BC740400788508 /* ProductDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVM.swift; sourceTree = "<group>"; };
 		55F17F9629BC740C00788508 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
+		55F17F9829BC7F9C00788508 /* ReadProductInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadProductInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				55F17F7929BC65A000788508 /* ReadProductListInteractor.swift */,
+				55F17F9829BC7F9C00788508 /* ReadProductInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				55F17F7A29BC65A000788508 /* ReadProductListInteractor.swift in Sources */,
 				55F17F9529BC740400788508 /* ProductDetailVM.swift in Sources */,
 				55F17F9029BC6AB000788508 /* ProductCardUiModel.swift in Sources */,
+				55F17F9929BC7F9C00788508 /* ReadProductInteractor.swift in Sources */,
 				55F17F7429BC656100788508 /* HomeVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
